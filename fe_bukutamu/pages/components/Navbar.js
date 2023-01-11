@@ -9,8 +9,9 @@ export default function Navbar() {
             </nav>
             <div className="flex flex-col justify-between mt-6 fixed">
                 {/* Logo */}
-                <div className='mb-10'>
-                    <img src='logo.svg' />
+                <div className='flex items-center mb-10'>
+                    <img src='logo.svg'/>
+                    <p className='text-main-bg text-xl font-semibold font-Poppins mx-4'>Guest Book 17</p>
                 </div>
                 <aside >
                     <ul className='font-semibold font-Poppins'>
@@ -53,7 +54,7 @@ export default function Navbar() {
                         {/* Footer nav */}
                         <div className='bottom-0 fixed w-54'>
                             <li>
-                                <Link href='/' className='flex items-center text-center px-4 py-3 my-2 text-menu-text focus:bg-main-bg focus:text-white rounded-md "'>
+                                <Link href='/' className='flex items-center text-center px-4 py-3 my-2 focus:text-red-700 rounded-md "'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                                     </svg>
