@@ -63,7 +63,6 @@ export default function Navbar() {
                             </li>
                         </div>
                     </ul>
-                    {/* Footer menu */}
                 </aside>
             </div>
         </>
