@@ -16,16 +16,17 @@ router.post('/login', async (req, res) => {
             status: 404,
             message: "User not found"
         });
-        const isPasswordValid = bcrypt.compare(password, user.password);
-        if (!isPasswordValid) return res.status(403).send({
-            status: 403,
+        const isPasswordValid = bcrypt.compareSync(password, user.password);
+        if (!isPasswordValid) return res.status(404).send({
+            status: 404,
             message: "Invalid password"
         })
         const token = jwt.sign({ userId: user.id }, 'secret-key')
         res.status(200).send({
             status: 200,
             message: 'Success',
-            token: token
+            token: token,
+            password: isPasswordValid
         })
     } catch (error) {
         res.status(500).send(error.message)
