@@ -33,4 +33,17 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.get('/data/user', async (req, res) => {
+    try {
+        const user = await User.findAll()
+        res.status(200).send({
+            status: 200,
+            message: `Successfully get data`,
+            data: user
+        })
+    } catch (error) {
+        
+    }
+})
+
 module.exports = router;
